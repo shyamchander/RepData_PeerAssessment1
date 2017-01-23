@@ -60,7 +60,7 @@ plot(x = avgStepsByInterval$interval,y=avgStepsByInterval$steps,type = "l",main=
 
 #Calculate max avg steps and corresponding interal for display in report
 maxAvgSteps<-max(avgStepsByInterval$steps)
-maxAvgStepsByInterval<-avgStepsByInterval$interval[maxAvgSteps]
+maxAvgStepsByInterval<-avgStepsByInterval$interval[avgStepsByInterval$steps==maxAvgSteps]
 ```
 The **`r maxAvgStepsByInterval`** - 5-minute interval contains the maximum number of steps **`r maxAvgSteps`**.
 
